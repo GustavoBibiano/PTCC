@@ -1,2 +1,16 @@
 /**/
 
+body{
+    background-color: #2196f3;
+}
+
+table{
+    background-color: transparent;
+    margin-top: 1rem;
+    color: whitesmoke;
+
+}
+
+thead{
+    background-color: #0176d3;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+    <script src="components/loader.js"></script>
+    <script src="components/jquery-3.4.1.min.js"></script>
+    <script src="components/materialize.js"></script>
+    <script src="components/acao.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link href="css/material-icon.css" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="nav-extended blue">
+        <div class="nav-wrapper container">
+          <a href="home.html" class="brand-logo"><i class="material-icons large white-text">image</i></a>
+          <a href="#" data-target="menu-mobile" class="sidenav-trigger"><i class="material-icons large white-text">menu</i></a>
+          <ul id="menu-desktop" class="right hide-on-med-and-down">
+            <li><a href="#" class="white-text">Venda</a></li>
+            <li class="active"><a href="estoque.html" class="white-text">Estoque</a></li>
+            <li><a href="contas_a_pagar.html" class="white-text">Contas a pagar</a></li>
+            <li><a href="#" class="white-text">Contas a receber</a></li>
+            <li><a href="#" class="white-text">Lucro e gastos</a></li>
+            <li><a href="index.html" class="red-text"><b>Sair</b></a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="nav-search blue">
+            <div class="nav-wrapper">
+              <form>
+                <div class="input-field">
+                  <input id="search" type="search" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
+            </div>
+          </nav>
+
+      <ul class="sidenav blue" id="menu-mobile">
+        <li><a class="white-text" href="#">Venda <i class="material-icons right white-text">keyboard_arrow_right</i></a></li>
+        <li class="active"><a class="white-text" href="estoque.html">Estoque <i class="material-icons right white-text">keyboard_arrow_right</i></a></li>
+        <li><a class="white-text" href="contas_a_pagar.html">Contas a pagar <i class="material-icons right white-text">keyboard_arrow_right</i></a></li>
+        <li><a class="white-text" href="#">Contas a receber <i class="material-icons right white-text">keyboard_arrow_right</i></a></li>
+        <li><a class="white-text" href="#">Lucro e gastos <i class="material-icons right white-text">keyboard_arrow_right</i></a></li>
+        <li><a class="red-text" href="index.html"><b>Sair</b></a></li>
+      </ul>
+
+    <div class="container">
+            <table class="highlight">
+                    <thead>
+                      <tr>
+                          <th>Produto</th>
+                          <th>Data</th>
+                          <th>Quantidade</th>
+                          <th>Preço Unit.</th>
+                          <th>Preço Total</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                      <tr>
+                        <td>Produto 1</td>
+                        <td>31/12/2019</td>
+                        <td><u>40</u> unid.</td>
+                        <td>R$ 50.00</td>
+                        <td>R$ 2000.00</td>
+                      </tr>
+                      <tr>
+                        <td>Produto 2</td>
+                        <td>31/12/2019</td>
+                        <td><u>50</u> unid.</td>
+                        <td>R$ 10.00</td>
+                        <td>R$ 500.00</td>
+                      </tr>
+                      <tr>
+                        <td>Produto 3</td>
+                        <td>31/12/2019</td>
+                        <td><u style="color: red;">15</u> unid.</td>
+                        <td>R$ 20.00</td>
+                        <td>R$ 300.00</td>
+                      </tr>
+                      <tr class="modal-trigger" href="#detail" id="tr4">
+                        <td>Produto 4</td>
+                        <td>31/12/2019</td>
+                        <td><u>50</u> unid.</td>
+                        <td>R$ 30.00</td>
+                        <td>R$ 1800.00</td>
+                        </tr>
+                    </tbody>
+                  </table>
+    </div>
+
+    <section>
+            <div class="fixed-action-btn">
+                    <a class="btn-floating btn-large white">
+                      <i class="large material-icons grey-text text-darken-3">keyboard_arrow_up</i>
+                    </a>
+                    <ul>
+                        <li><a class="btn-floating btn-search white"><i class="material-icons grey-text text-darken-3">search</i></a></li>  
+                        <li><a class="btn-floating btn-add white"><i class="material-icons grey-text text-darken-3">add</i></a></li>
+                    </ul>
+                  </div>
+
+        <div id="detail" class="modal">
+            <div class="modal-content">
+              <h4>Produto 4</h4>
+              <p><b>Data: </b> 31/12/2019 | <b>Hora: </b> 16:17</p>
+              <p><b>Gênero: </b> Feminino | <b>Tamanhos disponíveis: </b> P, M, G</p>
+              <p><b>Quantidade em estoque: </b> <u>50</u> unidades</p>
+              <p><b>Preço unitário: </b> R$ 30.00</p>
+              <p><b>Preço total da compra: </b> R$ 1800.00</p>
+            </div>
+            <div class="modal-footer">
+              <button class="modal-close waves-effect waves-red btn-flat btn-delete"><i class="material-icons large">delete</i></button>
+            </div>
+          </div>
+    </section>  
+</body>
+</html>
